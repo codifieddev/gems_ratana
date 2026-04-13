@@ -58,9 +58,9 @@ export default async function Page() {
   const hasActiveSections = Array.isArray(page?.sections) && page.sections.some((s: any) => s.enabled);
   const hero = normalizeHero(page?.hero);
 
-  if (page && isPagePublished(page) && hasActiveSections) {
-    return <PageContentRenderer page={withDynamicHero(page)} />;
-  }
+  // if (page && isPagePublished(page) && hasActiveSections) {
+  //   return <PageContentRenderer page={withDynamicHero(page)} />;
+  // }
 
   return <GemHomePage hero={hero} />;
 }
