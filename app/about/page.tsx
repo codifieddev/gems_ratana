@@ -4,6 +4,9 @@ import PageContentRenderer from "@/components/pages/PageContentRenderer";
 import { getPageData } from "@/lib/getPageData";
 import { isPagePublished } from "@/lib/store/pages/pageHelpers";
 
+export const dynamic = "force-dynamic";
+export const revalidate = 0;
+
 export async function generateMetadata(): Promise<Metadata> {
   const page = await getPageData("about");
 
