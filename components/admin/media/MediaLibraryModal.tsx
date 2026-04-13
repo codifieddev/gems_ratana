@@ -3,7 +3,6 @@ import { Dialog, DialogContent, DialogTitle } from "@/components/ui/dialog";
 import { MediaUploader } from "./MediaManage";
 import { Button } from "@/components/ui/button";
 import { ImageIcon, X } from "lucide-react";
-import { VisuallyHidden } from "@radix-ui/react-visually-hidden";
 
 interface MediaLibraryModalProps {
   onSelect: (media: { url: string; alt: string }) => void;
@@ -40,9 +39,7 @@ export const MediaLibraryModal = ({
 
       <Dialog open={open} onOpenChange={setOpen}>
         <DialogContent className="!h-[90vh] !max-w-[95vw] w-[95vw] !p-0 overflow-hidden border-white/10 bg-[#0a0a0a] shadow-2xl [&>button]:hidden">
-          <VisuallyHidden>
-            <DialogTitle>Media Library</DialogTitle>
-          </VisuallyHidden>
+          <DialogTitle className="sr-only">Media Library</DialogTitle>
           <div className="flex h-full flex-col">
             <div className="flex items-center justify-between p-6 border-b border-white/5 bg-black/40">
               <div>
